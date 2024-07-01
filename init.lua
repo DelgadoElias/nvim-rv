@@ -20,6 +20,7 @@ end
 require "lazy_setup"
 require "polish"
 
+-- require xclip to enable this feature
 vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
