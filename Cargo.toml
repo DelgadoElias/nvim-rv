@@ -1,0 +1,4 @@
+
+[dependencies]
+ratatui = "0.27.0"  # Ejemplo, ajusta según sea necesario
+image = "0.25.1"    # Ejemplo, ajusta según sea necesario

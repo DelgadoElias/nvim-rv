@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\lua\\plugins",
+    "\\lua\\user",
+    "\\lua\\web"
+  ],
+  "SelectedNode": "\\neovim.yml",
+  "PreviewInSolutionExplorer": false
+}
