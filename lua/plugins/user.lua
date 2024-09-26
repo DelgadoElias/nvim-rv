@@ -1,6 +1,5 @@
 ---@type LazySpec
 return {
-  -- Ejemplo de agregar plugins
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
@@ -8,37 +7,15 @@ return {
     config = function()
       require("lsp_signature").setup()
     end
-  },
-  
-{
-  "nvim-lualine/lualine.nvim",
-  dependencies = { "kyazdani42/nvim-web-devicons" },
-  config = function()
-      local lualine = require 'lualine'
-    lualine.config = {
-      options = {
-        theme = "tokyonight",
-      },
-      sections = {
-        lualine_a = { "mode" },
-        lualine_b = { "filename" },
-        lualine_c = { "g:coc_status" },
-        lualine_x = { "branch" },
-        lualine_y = { "encoding" },
-        lualine_z = { "location" }
-      }
-    }
-  end
-},
-  
-  -- Configuración personalizada de alpha-nvim
+  },  
+  -- Custom alpha-nvim config
   {
     "goolord/alpha-nvim",
     dependencies = { "kyazdani42/nvim-web-devicons" },
     config = function()
       local alpha = require 'alpha'
       local dashboard = require 'alpha.themes.dashboard'
-      -- Personaliza el encabezado del dashboard
+      -- Customized dashboard entry
       dashboard.section.header.val = {
         "RRRRRRRRRRRRRRRRR       VVVVVVVV           VVVVVVVV",
         "R::::::::::::::::R      V::::::V           V::::::V",
@@ -55,10 +32,12 @@ return {
         "RR:::::R     R:::::R            V.:::::::.V         ",
         "R::::::R     R:::::R             V.:::::.V          ",
         "R::::::R     R:::::R              V.:::.V           ",
-        "RRRRRRRR     RRRRRRR                VVV            "
+        "RRRRRRRR     RRRRRRR                VVV            ",
+        "                                                   ",
+        "  Acumuladores R.V - Posadas, Misiones, Argentina  "
       }
 
-      -- Configura los grupos de resaltado
+      -- Configure alpha headers
       vim.api.nvim_command('highlight AlphaHeader guifg=#ff0000')
 
       dashboard.section.header.opts = {
@@ -69,35 +48,13 @@ return {
       alpha.setup(dashboard.config)
     end
   },
-  {
-    "NachoNievaG/atac.nvim",
-    dependencies = { "akinsho/toggleterm.nvim" },
-  config = function()
-    local dir = "~/atac-nvim"
-
-    -- Expande la ruta de tilde
-    dir = vim.fn.expand(dir)
-
-    -- Crea el directorio si no existe
-    if vim.fn.isdirectory(dir) == 0 then
-      vim.fn.mkdir(dir, "p")
-    end
-
-    -- Configura el plugin atac.nvim
-    require("atac").setup({
-      dir = dir, -- Usa la ruta expandida
-    })
-  end,
-}
-,
-  
-  -- Deshabilitar plugins por defecto
+  -- Disable better-scape
   {
     "max397574/better-escape.nvim",
     enabled = false
   },
   
-  -- Configuración adicional de plugins
+  -- Additional config
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)

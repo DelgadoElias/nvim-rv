@@ -17,8 +17,20 @@ if not pcall(require, "lazy") then
     vim.cmd.quit()
 end
 
+
+
+-- Minimal setup
 require "lazy_setup"
 require "polish"
+
+-- Personal mappings
+require("user.mappings")
+require("web.angular")
+
+-- Another plugins to configure
+require("oil").setup()
+
+
 
 -- require xclip to enable this feature
 vim.opt.clipboard = "unnamedplus"
