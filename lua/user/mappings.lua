@@ -15,8 +15,12 @@ wk.add({
   { "<leader>ss", desc = "Surround current text object" },
   { "<leader>sy", desc = "Add surrounding with motion" },
 
-  -- { "<leader>t", name = "Terminal" },
-  -- { "<leader>ta", ":Atac<CR>", desc = "Atac Postman terminal" },
+ { "<leader>s", name = "Session & Pomodoro" },
+  { "<leader>sp", ":TimerStart pomodoro<CR>", desc = "Start Pomodoro session" },
+  { "<leader>se", ":TimerStop<CR>", desc = "Stop Pomodoro session" },
+
+  { "<leader>t", name = "Terminal" },
+  { "<leader>ta", ":Atac<CR>", desc = "Atac Postman terminal" },
   { "<leader>tt", "<cmd>lua global_note.toggle_note()<CR>", desc = "Toggle global note" }
-}, { prefix = "<leader>" })
+})
 
