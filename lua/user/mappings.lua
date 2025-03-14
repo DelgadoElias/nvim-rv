@@ -16,7 +16,7 @@ wk.add({
   { "<leader>sy", desc = "Add surrounding with motion" },
 
  { "<leader>s", name = "Session & Pomodoro" },
-  { "<leader>sp", ":TimerStart pomodoro<CR>", desc = "Start Pomodoro session" },
+  { "<leader>sp", ":TimerSession pomodoro<CR>", desc = "Start Pomodoro session" },
   { "<leader>se", ":TimerStop<CR>", desc = "Stop Pomodoro session" },
 
   { "<leader>t", name = "Terminal" },
