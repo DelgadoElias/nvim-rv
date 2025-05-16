@@ -2,7 +2,15 @@ local wk = require("which-key")
 wk.add({
   { "<leader>O", name = "Oil" },
   { "<leader>Oo", ":Oil<CR>", desc = "Open Oil" },
-  
+ 
+
+  -- Copilot chat configuration
+
+  { "<leader>c", name = "Copilot" },
+   { "<leader>cc", ":CopilotChatToggle<CR>", desc = "Toggle Copilot Chat" },
+  { "<leader>cq", ":CopilotChatQuit<CR>", desc = "Quit Copilot Chat" },
+  { "<leader>cr", ":CopilotChatReset<CR>", desc = "Reset Copilot Chat" },
+
   { "<leader>f", group = "file" },  -- grupo
   { "<leader>fd", "<cmd>lua vim.lsp.buf.definition()<CR>", desc = "Go to definition file" },
   

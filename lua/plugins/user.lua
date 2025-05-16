@@ -39,7 +39,7 @@ return {
       }
 
       -- Configure alpha headers
-      vim.api.nvim_command('highlight AlphaHeader guifg=#ff0000')
+      vim.api.nvim_command('highlight AlphaHeader guifg=#E33401')
 
       dashboard.section.header.opts = {
         position = "center",

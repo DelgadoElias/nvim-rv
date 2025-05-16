@@ -24,11 +24,49 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+git clone https://github.com/DelgadoElias/nvim-rv ~/.config/nvim
 ```
 
 #### Start Neovim
 
 ```shell
 nvim
+```
+
+#### Aditional Requirements:
+
+ - Install atac
+
+
+#### Clipboard
+
+For ubuntu: 
+```shell
+sudo apt install xclip
+```
+
+
+#### Configurng Copilot
+
+1.  Make sure the copilot and copilot-chat plugins are enabled in the lua.plugins folder
+
+2. Install the copilot CLI by running the following command in your terminal:
+
+```shell
+sudo apt install gh
+```
+
+3. Authenticate the CLI with your GitHub account by running the following command:
+
+```shell
+gh auth login
+```
+4. Install the github/gh-copilot plugin for github CLI
+
+```shell
+gh extension install github/gh-copilot
+```
+
+```shell
+:Copilot auth
 ```
